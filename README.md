@@ -13,18 +13,18 @@ This project uses [Feathers](http://feathersjs.com).
 
    ```
    cd path/to/feathers-demo
-   npm install
+   yarn
    ```
 
 3. Start your app
 
    ```
-   npm start
+   yarn start
    ```
 
 ## Testing
 
-Simply run `npm test` and all your tests in the `test/` directory will be run.
+Simply run `yarn test` and all your tests in the `test/` directory will be run.
 
 ## Scaffolding
 
