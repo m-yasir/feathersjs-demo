@@ -15,11 +15,11 @@
     ],
     "linebreak-style": [
       "error",
-      "unix"
+      "darwin"
     ],
     "quotes": [
       "error",
-      "single"
+      "double"
     ],
     "semi": [
       "error",
