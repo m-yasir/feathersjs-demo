@@ -2,14 +2,10 @@
 const { Templates } = require("./templates.class");
 const createModel = require("../../models/templates.model");
 const hooks = require("./templates.hooks");
-const { Op } = require("sequelize");
 
 module.exports = function (app) {
   const options = {
     Model: createModel(app),
-    operators: {
-      $like: Op.like,
-    },
     paginate: app.get("paginate"),
   };
 

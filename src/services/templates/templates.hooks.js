@@ -5,27 +5,33 @@ module.exports = {
     all: [],
     find: [
       (context) => {
-        // const sequelizeClient = context.app.get('sequelizeClient');
-        
-        // const { templates } = sequelizeClient.models;
 
-        // if (context.params.query.prefixMatchKey !== undefined && context.params.query.prefixMatch !== undefined) {
-        //   console.log('prefixMatch found: ', context.params.query.prefixMatch);
-        //   context.params.query = {
-        //     ...context.params.query,
-        //     [context.params.query.prefixMatchKey]: {
-        //       $like: context.params.query.prefixMatch + "%"
-        //     }
-        //   }
-        // }
+        if (context.params.query.prefixMatchKey !== undefined && context.params.query.prefixMatch !== undefined) {
+          console.log('context.params.query: ', context.params.query);
+          // context.params.query = {
+          //   ...context.params.query,
+          //   [context.params.query.prefixMatchKey]: {
+          //     $like: "%" + context.params.query.prefixMatch + "%",
+          //   },
+          // };
+          console.log('context.params.query: ', context.params.query);
+        }
 
-        console.log(context.params.query)
+        if (context.params.query.in)
+          context.params.query = {
+            text: {
+              $in: JSON.parse(context.params.query.in),
+            },
+          };
         
         return context;
       }
     ],
     get: [],
-    create: [],
+    create: [(context) => {
+      console.log("context.data", context.data);
+      return context;
+    }],
     update: [],
     patch: [],
     remove: []
