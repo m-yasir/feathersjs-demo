@@ -1,6 +1,6 @@
 # feathers-demo
 
-Repo made for keeping stuff which I made while trying out Feathersjs
+Repo made for keeping stuff I made while trying out Feathersjs
 
 ## About
 
